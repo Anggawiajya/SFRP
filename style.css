@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popis" sans-serif;
+}
+
+body{
+  min-height: 10vh;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+.heder{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 70px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo{
+  font-size: 20px;
+  color: #00B0FFEE;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: -50px;
+  text-shadow: 1px 4px 5px rgba(0, 0, 0, 1);
+}
+
+.navbar{
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.navbar a{
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-left: 40px;
+  position: relative;
+  transition: width 1s;
+  text-shadow: 1px 4px 5px rgba(0, 0, 0, 1);
+}
+
+.navbar a::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #00C9FF;
+}
+
+.navbar a:hover::before{
+  width: 100%;
+}
+
+/*font*/
+.sosial-icon{
+  font-size: 30px;
+  color: #FFFFFF;
+  align-items: flex-end;
+  font-weight: 500;
+  margin-top: 50%;
+  text-align: center;
+  list-style: none;
+}
+
+.sosial-icon a{
+  color: #FFFFFF;
+  margin: 50px;
+  text-shadow: 1px 4px 5px rgba(3, 3, 3, 1);
+}
+
+@media (max-width: 480px) {
+  .sosial-icon{
+    margin-top: 180%;
+  }
+  
+  .navbar{
+    margin-left: 50px;
+  }
+}
